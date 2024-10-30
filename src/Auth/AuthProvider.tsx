@@ -126,6 +126,8 @@ export function AuthProvider({ children }: AuthPrivederProps) {
     }
 
     function getAccessToken() {
+        //Puede que por aqui esté el error, ya que estas tratando de obtener el token de una variable que se borra cada vez que la pagina se recarga
+        //Intenta obtener el token usando localStorage.getItem('token') para que lo obtengas del localStorage que no se borra cuando recargas la pagina.
         return accesToken
     }
 
