@@ -52,6 +52,7 @@ export default function Dashboard() {
 
     async function LoadTodos() {
         try {
+            //Primero asegurarse que existe el token, osea si el usuario esta logeado y luego si cargar los datos, verificar que esten guardando el token correctamente usando localStorage o sessionStorage porque si no se va a borrar cada vez que recarguen la pagina
             const response = await fetch(`${API_URL}/todos`, {
                 headers: {
                     "Content-type": "application/json",
